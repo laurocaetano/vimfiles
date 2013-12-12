@@ -24,6 +24,9 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.exe$\|\.so$\|\.dll$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+"
+" NerdTree
+map <C-n> :NERDTreeToggle<CR>
 
 " N command for search
 nmap n nzz
