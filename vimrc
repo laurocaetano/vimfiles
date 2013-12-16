@@ -10,6 +10,11 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.rb setlocal spell
+autocmd FileType gitcommit setlocal spell
+set complete+=kspell
+
 " Autoindent with two spaces
 set tabstop=2
 set shiftwidth=2
