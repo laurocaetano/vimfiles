@@ -37,12 +37,10 @@ map <C-n> :NERDTreeToggle<CR>
 nmap n nzz
 nmap N Nzz
 
-" Solarized theme
-syntax enable
-set background=light
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-colorscheme solarized
+" Color Theme
+colorscheme Tomorrow-Night-Eighties
+syntax on
+set t_Co=256
 
 "Move lines up and down
 nmap <C-Up> ddkP
