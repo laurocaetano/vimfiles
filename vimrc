@@ -20,6 +20,9 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" fontsize
+set guifont=Menlo\ Regular:h14"
+
 " ctrl-p config
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 2
