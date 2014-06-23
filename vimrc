@@ -38,6 +38,10 @@ map <C-n> :NERDTreeToggle<CR>
 nmap n nzz
 nmap N Nzz
 
+set t_Co=256
+syntax enable
+color Tomorrow
+
 set colorcolumn=80
 
 set nu " Line numbers on
