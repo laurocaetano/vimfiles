@@ -20,9 +20,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-" fontsize
-set guifont=Menlo\ Regular:h14"
-
 " ctrl-p config
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 2
@@ -33,6 +30,7 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 "
+
 " NerdTree
 map <C-n> :NERDTreeToggle<CR>
 
@@ -40,30 +38,17 @@ map <C-n> :NERDTreeToggle<CR>
 nmap n nzz
 nmap N Nzz
 
-" Solarized theme
-syntax enable
-set background=light
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-colorscheme solarized
-
-"Move lines up and down
-nmap <C-Up> ddkP
-nmap <C-Down> ddp
-
 set colorcolumn=80
+
 set nu " Line numbers on
 
 " Ignore case in searches
 set ignorecase
 
-" Reload the .vimrc after save
-autocmd! bufwritepost .vimrc source %
-
 " copy selection to the clipboard
 vmap <Leader>cp :w !pbcopy<CR><CR>
 
-" No spellcheck for Markdown files
+" Spellcheck for Markdown files
 autocmd BufNewFile,BufRead *.md set spelllang=en spell filetype=markdown
 
 " Forcing the use of hjkl keys to navigate
@@ -75,9 +60,6 @@ inoremap <Up> <nop>
 inoremap <Down> <nop>
 inoremap <Left> <nop>
 inoremap <Right> <nop>
-
-" Tabular
-inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
 function! s:align()
   let p = '^\s*|\s.*\s|\s*$'
