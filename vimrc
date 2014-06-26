@@ -40,7 +40,7 @@ nmap N Nzz
 
 set t_Co=256
 syntax enable
-color Tomorrow
+color Tomorrow-Night
 
 set colorcolumn=80
 
