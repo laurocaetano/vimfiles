@@ -1,2 +1,3 @@
 vimfiles
+./install.sh
 ========
