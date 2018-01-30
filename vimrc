@@ -21,6 +21,12 @@ set mouse=a
 set wildignore+=*/public/*,*/tmp/*
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|public\|deps\|_build\|fonts'
 
+" Spell checker
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.rb setlocal spell
+autocmd FileType gitcommit setlocal spell
+set complete+=kspell
+
 filetype off         " required
 let mapleader=","
 
