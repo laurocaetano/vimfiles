@@ -52,6 +52,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'joshdick/onedark.vim'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rking/ag.vim'
@@ -66,11 +67,11 @@ syntax enable
 
 " Color scheme
 " colorscheme molokai
+syntax on
 colorscheme onedark
-set guifont=Inconsolata:h16
 
 " Airline config
-let g:airline_theme='molokai'
+let g:airline_theme='onedark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
