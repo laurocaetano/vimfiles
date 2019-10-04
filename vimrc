@@ -60,6 +60,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'tpope/vim-surround'
 Plugin 'udalov/kotlin-vim'
+Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()            " required
 filetype on
