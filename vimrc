@@ -14,20 +14,15 @@ set nocompatible     " be iMproved, required
 set number           " shows line numbers
 set hlsearch         " highlight search results
 set cursorline       " highlight cursor line
-set laststatus=2     " this is needed for airline
 set wildmode=list    " expand and folders/tabs when opening a file
 set backspace=2      " makes backspace work as it should work
 set mouse=a
-set wildignore+=*/public/*,*/tmp/*
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|public\|deps\|_build\|fonts'
 
 " Spell checker
 autocmd BufRead,BufNewFile *.md setlocal spell
-autocmd BufRead,BufNewFile *.rb setlocal spell
 autocmd FileType gitcommit setlocal spell
 set complete+=kspell
 
-filetype off         " required
 let mapleader=","
 
 " NerdTree
@@ -38,43 +33,6 @@ let NERDTreeIgnore = ['build$']
 " N command for search
 nmap n nzz
 nmap N Nzz
-
-" Vundle config
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'joshdick/onedark.vim'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'rking/ag.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-surround'
-Plugin 'editorconfig/editorconfig-vim'
-
-call vundle#end()            " required
-filetype on
-filetype plugin indent on    " required
-syntax enable
-
-" Color scheme
-" colorscheme molokai
-syntax on
-colorscheme onedark
-
-" Airline config
-let g:airline_theme='onedark'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-
-" ctags
-map <silent> <Leader>rt :!retag<cr>
 
 " Set indentation
 set expandtab
@@ -162,3 +120,15 @@ if executable('ag')
 
   map <Leader>f :Ag<SPACE>
 endif
+
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
+syntax on
+set t_Co=256
+set cursorline
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
