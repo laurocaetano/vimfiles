@@ -121,14 +121,13 @@ if executable('ag')
   map <Leader>f :Ag<SPACE>
 endif
 
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
-
-syntax on
+" Theme setup
+" Be aware of https://github.com/sonph/onehalf/issues/128
 set t_Co=256
 set cursorline
 colorscheme onehalfdark
 let g:airline_theme='onehalfdark'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+filetype plugin indent on    " required
+syntax enable
